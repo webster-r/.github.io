@@ -77,7 +77,7 @@
         <form id="form">
             <input type="text" placeholder="Название" id="name">
             <input type="text" placeholder="Описание" id="desc">
-            <input type="text" placeholder="Цена" id="price">
+            <input type="number" placeholder="Цена" id="price">
             <button id="add">Добавить</button>
         </form>
     </div>
@@ -89,10 +89,12 @@
         add.addEventListener("click", () => {
             let name = document.getElementById("name").value;
             let desc = document.getElementById("desc").value;
+            let desc = document.getElementById("price").value;
             tg.close();
-            led data = {
+            let data = {
                 name: name,
-                desc: desc
+                desc: desc,
+                price: price,
             }
             tg.sendData(JSON.stringify(data));
         });
