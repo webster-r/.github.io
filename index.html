@@ -86,19 +86,18 @@
         let tg = window.Telegram.WebApp;
         let add = document.getElementById("add");
         tg.expand();
-        add.addEventListener("click", () => {
-            let name = document.getElementById("name").value;
-            let desc = document.getElementById("desc").value;
-            let desc = document.getElementById("price").value;
-            tg.close();
-            let data = {
-                name: name,
-                desc: desc,
-                price: price
-            }
-            tg.sendData(JSON.stringify(data));
-            tg.close();
-        });
+        add.addEventListener("click", (event) => {
+            event.preventDefault(); // Предотвращение отправки формы
+        let name = document.getElementById("name").value;
+        let desc = document.getElementById("desc").value;
+        let price = document.getElementById("price").value; // Добавлено поле price
+        let data = {
+        name: name,
+        desc: desc,
+        price: price // Добавлено поле price
+    }
+    tg.sendData(JSON.stringify(data)); // Отправка данных боту и закрытие Mini App
+});
     </script>
 </body>
 </html>
