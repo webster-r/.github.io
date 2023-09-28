@@ -23,6 +23,10 @@
             width: 100%;
             padding: 20px;
             text-align: center;
+            min-height: 100vh; /* минимальная высота 100% от высоты окна просмотра */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* распределение пространства между элементами */
         }
 
         h1 {
@@ -38,7 +42,8 @@
         button {
             border: 0;
             border-radius: 5px;
-            margin-top: 50px;
+            margin-top: auto; /* автоматический отступ сверху */
+            margin-bottom: 25px; /* отступ снизу 25px */
             height: 60px;
             width: 200px;
             font-size: 20px;
@@ -55,6 +60,7 @@
 
         #form {
             text-align: center;
+            flex-grow: 1; /* позволяет форме занимать все доступное пространство */
         }
 
         textarea {
