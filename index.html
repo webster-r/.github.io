@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Document</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
         * {
@@ -61,9 +62,9 @@
         #form {
             text-align: center;
             flex-grow: 1; /* позволяет форме занимать все доступное пространство */
-	    display: flex;
-	    flex-direction: column;
-	    align-items: center; /* /* позволяет форме занимать все доступное пространство */
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* /* позволяет форме занимать все доступное пространство */
         }
 
         textarea {
@@ -96,12 +97,13 @@
 </head>
 <body>
     <div id="main">
-        <form id="form">
-            <input type="text" placeholder="Название" id="name">
-            <textarea placeholder="Описание" id="desc"></textarea>
-            <input type="number" placeholder="Цена" id="price">
-            <button id="add">Добавить</button>
-        </form>
+        <form id="form" class="d-flex flex-column align-items-center">
+		<input type="text" class="form-control mb-3" placeholder="Название" id="name">
+		<textarea class="form-control mb-3" placeholder="Описание" id="desc"></textarea>
+		<input type="number" class="form-control mb-3" placeholder="Цена" id="price">
+		<button id="add" class="btn btn-primary">Добавить</button>
+</form>
+
     </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
