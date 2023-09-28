@@ -57,9 +57,17 @@
             text-align: center;
         }
 
-        #desc {
-            text-align: center;
-            height: 300px;
+        textarea {
+            width: 90%;
+            outline: none;
+            margin: 10px 5%;
+            padding: 15px 10px;
+            font-size: 14px;
+            border: 2px solid silver;
+            border-radius: 5px;
+            resize: vertical; /* Позволяет пользователю изменять размер только вертикально */
+            overflow: auto;
+            text-align: left; /* Выравнивание текста по левому краю */
         }
 
         input {
@@ -81,7 +89,7 @@
     <div id="main">
         <form id="form">
             <input type="text" placeholder="Название" id="name">
-            <input type="text" placeholder="Описание" id="desc">
+            <textarea placeholder="Описание" id="desc"></textarea>
             <input type="number" placeholder="Цена" id="price">
             <button id="add">Добавить</button>
         </form>
